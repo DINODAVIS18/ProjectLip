@@ -1,0 +1,280 @@
+.highlight-section {
+  width: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.highlight-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+.highlight-image-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.highlight-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.highlight-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--brand-orange);
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.highlight-description {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  font-family: "HarmoniaSansW01", system-ui, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 90%;
+}
+
+.highlight-btn {
+  display: inline-block;
+  padding: 0.4rem 3rem;
+  background-color: transparent;
+  color: var(--brand-orange);
+  border: 2px solid var(--brand-orange);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.highlight-btn:hover {
+  background-color: var(--brand-orange);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
+}
+
+@media (max-width: 1600px) {
+  .highlight-container {
+    padding: 0 3rem;
+  }
+
+  .highlight-title {
+    font-size: 3.2rem;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .highlight-container {
+    padding: 0 2.5rem;
+  }
+
+  .highlight-title {
+    font-size: 3rem;
+  }
+
+  .highlight-description {
+    font-size: 1.05rem;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .highlight-section {
+    padding: 4rem 0;
+  }
+
+  .highlight-container {
+    padding: 0 2rem;
+  }
+
+  .highlight-title {
+    font-size: 2.8rem;
+  }
+
+  .highlight-description {
+    font-size: 1rem;
+  }
+
+  .highlight-btn {
+    padding: 0.7rem 2.8rem;
+    font-size: 0.9rem;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .highlight-title {
+    font-size: 2.5rem;
+  }
+
+  .highlight-description {
+    font-size: 0.95rem;
+    max-width: 95%;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .highlight-section {
+    padding: 3rem 0;
+  }
+
+  .highlight-container {
+    padding: 0 2rem;
+  }
+
+  .highlight-title {
+    font-size: 2.3rem;
+  }
+
+  .highlight-description {
+    max-width: 100%;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlight-section {
+    padding: 2.5rem 0;
+  }
+
+  .highlight-container {
+    padding: 0 1.5rem;
+  }
+
+  .highlight-title {
+    font-size: 2.2rem;
+  }
+
+  .highlight-description {
+    font-size: 0.9rem;
+  }
+
+  .highlight-btn {
+    padding: 0.65rem 2.5rem;
+    font-size: 0.85rem;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .highlight-section {
+    padding: 2rem 0;
+  }
+
+  .highlight-container {
+    padding: 0 1.5rem;
+  }
+
+  .highlight-title {
+    font-size: 2rem;
+  }
+
+  .highlight-description {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .highlight-btn {
+    padding: 0.6rem 2.3rem;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-section {
+    padding: 1.5rem 0;
+  }
+
+  .highlight-container {
+    padding: 0 1rem;
+  }
+
+  .highlight-title {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+  .highlight-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .highlight-btn {
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+  }
+
+  .highlight-image-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .highlight-title {
+    font-size: 1.6rem;
+  }
+
+  .highlight-description {
+    font-size: 0.82rem;
+  }
+
+  .highlight-btn {
+    padding: 0.55rem 1.8rem;
+  }
+}

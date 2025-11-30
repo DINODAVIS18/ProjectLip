@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Field Gothic";
+  src: url("./assets/fonts/FieldGothic-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmoniaSansW01";
+  src: url("./assets/fonts/HarmoniaSansW01-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --brand-orange: #ff5000;
+  --button-orange: #ff510083;
+  --hero-max-width: 1400px;
+}
+
+body {
+  font-family: "HarmoniaSansW01", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #111;
+     background-color: #faf8f6;
+}
+
+main {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-outline-orange {
+  border-radius: 999px;
+  border: 2px solid var(--button-orange);
+  background-color: #ffffff;
+  color: var(--brand-orange);
+  padding: 0.5rem 2.5rem;
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.btn-outline-orange:hover {
+  background-color: var(--brand-orange);
+  color: #ffffff;
+  border-color: var(--brand-orange);
+}
+
+h1,
+h2,
+h3,
+a,
+.hero-heading {
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1rem;
+}
+
+@media (max-width: 1200px) {
+  .btn-outline-orange {
+    font-size: 0.9rem;
+    padding: 0.65rem 2.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .btn-outline-orange {
+    font-size: 0.88rem;
+    padding: 0.6rem 2.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .btn-outline-orange {
+    font-size: 0.85rem;
+    padding: 0.55rem 1.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-outline-orange {
+    font-size: 0.83rem;
+    padding: 0.52rem 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0.6rem 1rem;
+  }
+  
+  .btn-outline-orange {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

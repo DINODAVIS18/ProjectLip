@@ -1,0 +1,440 @@
+.main-header {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;               
+  max-width: 1360px;         
+  z-index: 1000;
+  pointer-events: auto;
+  background-color: transparent;
+transition:
+    top 0.2s ease,
+    transform 0.2s ease,
+    width 0.2s ease,
+    max-width 0.2s ease,
+    backdrop-filter 0.6s ease,
+    border-radius 0.2s ease,
+    padding 0.2s ease;
+  z-index: 999;}
+
+.main-header.scrolled {
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  width: 100%;
+  max-width: 100%;
+  backdrop-filter: blur(50px);
+  border-radius: 0;
+}
+
+.info-header {
+  width: 100%;
+  background-color: var(--brand-orange);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 999px;
+  padding: 0.4rem 1.5rem;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+
+.main-header.scrolled .info-header {
+  border-radius: 0;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  gap: 0;
+  border-radius: 999px;
+  border: 1.5px solid var(--brand-orange);
+  background-color: transparent;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-left a {
+  padding: 0.45rem 1.2rem;
+  background-color: transparent;
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1a1a1a;
+  border: none;
+}
+
+.nav-left a:hover {
+  background-color: var(--brand-orange);
+}
+
+.nav-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--brand-orange);
+}
+
+.nav-right {
+  gap: 1rem;
+}
+
+.nav-pill {
+  border-radius: 999px;
+  border: 1.5px solid var(--brand-orange);
+  padding: 0.45rem 1.2rem;
+  background-color: transparent;
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-pill:hover {
+  background-color: var(--brand-orange);
+}
+
+.cart-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--brand-orange);
+  border-radius: 999px;
+  background-color: transparent;
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cart-pill:hover {
+  background-color: var(--brand-orange);
+}
+
+.cart-pill:hover a {
+  color: #1a1a1a;
+}
+
+.cart-pill:hover .cart-count {
+    border-left-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.cart-pill a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.45rem;
+  font-weight: 700;
+}
+
+.cart-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  border: 1px solid var(--brand-orange);
+  background-color: transparent;
+}
+
+.mobile-burger {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .logo-text {
+    font-size: 26px;
+  }
+  
+  .nav-left a,
+  .nav-pill {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .cart-pill {
+    font-size: 0.85rem;
+  }
+  
+  .cart-pill a {
+    padding: 0.4rem;
+  }
+  
+  .cart-count {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-left {
+    gap: 0;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+  }
+  
+  .nav-left a,
+  .nav-pill {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.8rem;
+  }
+  
+  .cart-pill {
+    font-size: 0.8rem;
+  }
+  
+  .cart-pill a {
+    padding: 0.35rem;
+  }
+  
+  .cart-count {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav-header {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    width: 85%;  
+    top: 20px;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+  }
+
+  .main-header.scrolled {
+    backdrop-filter: blur(50px);
+    padding: 0.5 1.5rem;
+  }
+
+  .info-header {
+    display: none;
+  }
+
+  .nav-left,
+  .nav-pill {
+    display: none;
+  }
+
+  .nav-header {
+    padding: 0.3rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .nav-center {
+    justify-content: flex-start;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    letter-spacing: 0.2em;
+  }
+
+  .cart-pill {
+    margin-left: auto;
+    margin-right: 0.5rem;
+    padding: 0.4rem;
+    border: 1.5px solid var(--brand-orange);
+  }
+
+  .cart-pill:hover {
+    background-color: var(--brand-orange);
+    color: #1a1a1a;
+  }
+
+ .cart-pill:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'/%3E%3Ccircle cx='20' cy='21' r='1'/%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3E%3C/svg%3E");
+}
+
+  .cart-pill a {
+    display: none;
+  }
+
+  .cart-count {
+    display: none;
+  }
+
+  .cart-pill::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ff5000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'/%3E%3Ccircle cx='20' cy='21' r='1'/%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-burger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+  }
+
+  .mobile-burger span {
+    width: 20px;
+    height: 2px;
+    background-color: var(--brand-orange);
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    width: 90%;
+    top: 15px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .main-header.scrolled {
+    padding: 0 1rem;
+  }
+
+  .logo-text {
+    font-size: 18px;
+    letter-spacing: 0.15em;
+  }
+
+  .cart-pill {
+    margin-right: 0.3rem;
+    padding: 0.35rem;
+  }
+
+  .cart-pill::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mobile-burger span {
+    width: 18px;
+  }
+
+  .nav-header {
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 1200;
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 78%;
+  max-width: 320px;
+  height: 100%;
+  background: rgba(255,255,255,0.92);
+  padding: 1.2rem 1.4rem;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  box-shadow: -4px 0 16px rgba(0,0,0,0.1);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+}
+
+.sidebar-overlay.show .sidebar-panel {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--brand-orange);
+  background: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--brand-orange);
+}
+
+.sidebar-close {
+  border: none;
+  background: #ffffff;
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sidebar-info {
+  margin-top: 1.4rem;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: var(--brand-orange);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+}
+
+.sidebar-nav {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-nav a {
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}

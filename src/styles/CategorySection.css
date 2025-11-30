@@ -1,0 +1,276 @@
+.category-section {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  overflow: hidden;
+}
+
+.category-container {
+  max-width: var(--hero-max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  justify-items: center;
+}
+
+.category-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--button-orange);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.category-card:hover .category-overlay {
+  opacity: 0.5;
+}
+
+.category-card:hover .category-image {
+  transform: scale(1.05);
+}
+
+.category-content {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  z-index: 2;
+}
+
+.category-label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+  font-family: "HarmoniaSansW01", system-ui, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.category-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin: 0;
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+}
+
+.category-card:hover .category-label,
+.category-card:hover .category-title {
+  color: #1a1a1a;
+}
+
+.features-marquee {
+  top: 1.5rem;
+  background-color: #ffffff;
+ width: 100vw;
+  padding: 3rem 2rem;
+  position: relative;
+   left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding-right: 2rem;
+}
+
+.feature-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--brand-orange);
+  font-family: "Field Gothic", "HarmoniaSansW01", system-ui, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.feature-dot {
+  font-size: 1.5rem;
+  color: var(--button-orange);
+  margin: 0 1.5rem;
+  font-weight: 800;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .category-grid {
+    gap: 1rem;
+  }
+
+  .category-title {
+    font-size: 2.2rem;
+  }
+
+  .category-content {
+    top: 1.3rem;
+    left: 1.3rem;
+  }
+
+  .feature-text {
+    font-size: 1.3rem;
+  }
+
+  .feature-dot {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-section {
+    padding: 2.5rem 0;
+  }
+
+  .category-container {
+    padding: 0 1.5rem;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-card {
+    aspect-ratio: 4/3;
+  }
+
+  .category-title {
+    font-size: 3rem;
+  }
+
+  .category-content {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .features-marquee {
+    padding: 1.2rem 0;
+  }
+
+  .feature-text {
+    font-size: 1.1rem;
+  }
+
+  .feature-dot {
+    font-size: 1.1rem;
+    margin: 0 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .category-section {
+    padding: 2rem 0;
+  }
+
+  .category-container {
+    padding: 0 1rem;
+  }
+
+  .category-grid {
+    gap: 0.8rem;
+  }
+
+  .category-title {
+    font-size: 2.5rem;
+  }
+
+  .category-label {
+    font-size: 1.2rem;
+  }
+
+  .category-content {
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+
+  .features-marquee {
+    padding: 1.2rem 0;
+  }
+
+  .feature-text {
+    font-size: 0.95rem;
+  }
+
+  .feature-dot {
+    font-size: 0.95rem;
+    margin: 0 1rem;
+  }
+
+  .marquee-item {
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-section {
+    padding: 1.5rem 0;
+  }
+
+  .category-title {
+    font-size: 2.2rem;
+  }
+
+  .category-label {
+    font-size: 1rem;
+  }
+
+  .feature-text {
+    font-size: 0.85rem;
+  }
+
+  .feature-dot {
+    font-size: 0.85rem;
+  }
+}
